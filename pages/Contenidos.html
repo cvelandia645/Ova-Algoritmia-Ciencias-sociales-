@@ -1,171 +1,259 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/all.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
-    <title>Contenidos - El Universo</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&amp;display=swap" rel="stylesheet" />
+    <title>Descubriendo el Universo - Contenidos</title>
     <style>
-        .subtema-container {
-            margin-bottom: 15px;
-            background: #232329;
-            border-radius: 6px;
-            overflow: hidden;
-            border: 1px solid #3c3c42;
-        }
-        .subtema-checkbox {
-            display: none;
-        }
-        .subtema-header {
-            padding: 18px 20px;
-            background: #1e1e24;
-            color: #ffffff;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .subtema-header:hover {
-            background: #2d2d35;
-            color: #00bcd4;
-        }
-        .subtema-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out, padding 0.3s ease;
-            padding: 0 20px;
-            background: #232329;
-        }
-        .subtema-checkbox:checked ~ .subtema-content {
-            max-height: 1000px;
-            padding: 20px;
-            border-top: 1px solid #3c3c42;
-        }
-        .subtema-checkbox:checked ~ .subtema-header i {
-            transform: rotate(180deg);
-            color: #00bcd4;
-        }
-        .subtema-header i {
-            transition: transform 0.3s;
-        }
-        .img-espacio {
-            max-width: 100%;
-            height: auto;
-            border-radius: 6px;
-            margin-top: 15px;
-            border: 2px solid #3c3c42;
-            display: block;
-        }
+      /* PARCHE DE VISIBILIDAD Y FONDO DE ESTRELLAS */
+      body, .wrapper, .page-content, main {
+        opacity: 1 !important;
+        display: flex !important;
+        visibility: visible !important;
+      }
+      
+      .page-content {
+        width: 100% !important;
+        min-height: 100vh !important;
+        background-color: #0b0b12 !important;
+        background-image: 
+          radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+          radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+          radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+        background-size: 550px 550px, 350px 350px, 250px 250px;
+        background-position: 0 0, 40px 60px, 130px 270px;
+      }
+
+      /* BARRA LATERAL: Negra limpia y azul celeste */
+      .sidebar {
+        background-color: #09090b !important;
+        background-image: none !important;
+        border-right: 1px solid #1f1f23 !important;
+        min-height: 100vh;
+      }
+      .sidebar .brand h3.brand-name {
+        color: #00bcd4 !important;
+        font-weight: bold;
+      }
+      .sidebar .brand i.xmark {
+        color: #00bcd4 !important;
+      }
+      .sidebar ul li a.sidebar-link {
+        color: #00bcd4 !important;
+        transition: background 0.3s, color 0.3s;
+      }
+      .sidebar ul li a.sidebar-link i {
+        color: #00bcd4 !important; 
+      }
+      .sidebar ul li a.sidebar-link:hover {
+        background-color: #141419 !important;
+        color: #ffffff !important;
+      }
+      .sidebar ul li a.sidebar-link:hover i {
+        color: #ffffff !important;
+      }
+      .sidebar ul li a.sidebar-link.active {
+        background-color: #1e1e24 !important;
+        border-left: 4px solid #00bcd4 !important;
+        color: #ffffff !important;
+      }
+      .sidebar ul li a.sidebar-link.active i {
+        color: #00bcd4 !important;
+      }
+
+      /* ESTILOS DE LAS TARJETAS TEMÁTICAS */
+      .contenido-box {
+        background-color: rgba(20, 20, 23, 0.9);
+        border: 1px solid #27272a;
+        border-radius: 10px;
+        padding: 25px;
+        margin-bottom: 25px;
+        backdrop-filter: blur(5px);
+        border-left: 4px solid #00bcd4;
+      }
+      .contenido-box h2 {
+        color: #00bcd4;
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.4rem;
+      }
+      .contenido-box p {
+        color: #e0e0e5;
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+      
+      /* ESTILOS PARA LAS IMÁGENES DE LOS TEMAS */
+      .tema-img {
+        width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+        border-radius: 6px;
+        margin: 15px 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .subtema-lista {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 15px;
+      }
+      .subtema-lista li {
+        background: rgba(255, 255, 255, 0.03);
+        margin: 8px 0;
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        color: #d0d0d5;
+      }
+      .subtema-lista strong {
+        color: #ffeb3b; 
+      }
+
+      /* BOTÓN DE FUENTE / INVESTIGACIÓN */
+      .btn-fuente {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #1e293b;
+        color: #00bcd4 !important;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-top: 15px;
+        border: 1px solid rgba(0, 188, 212, 0.3);
+        transition: all 0.3s ease;
+      }
+      .btn-fuente:hover {
+        background-color: #00bcd4;
+        color: #09090b !important;
+        border-color: #00bcd4;
+      }
     </style>
-</head>
-<body>
-    <div class="page-content">
+  </head>
+  <body>
+    
+    <div class="wrapper">
+      <div class="page-content index-page">
+        
         <div class="sidebar">
-            <div class="brand">
-                <i class="fa-solid fa-xmark xmark"></i>
-                <h3 class="brand-name">Zana</h3>
-            </div>
-            <ul>
-                <li>
-                    <a href="../index.html" class="sidebar-link">
-                        <i class="fa-regular fa-chart-bar fa-fw"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="./Contenidos.html" class="sidebar-link active">
-                        <i class="fa-solid fa-graduation-cap fa-fw"></i>
-                        <span>Contenidos</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="./Files.html" class="sidebar-link">
-                        <i class="fa-regular fa-folder fa-fw"></i>
-                        <span>Talleres Prácticos</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="./settings.html" class="sidebar-link">
-                        <i class="fa-solid fa-gear fa-fw"></i>
-                        <span>Evaluación OVA</span>
-                    </a>
-                </li>
-            </ul>
+          <div class="brand">
+            <i class="fa-solid fa-xmark xmark"></i>
+            <h3 class="brand-name" style="font-size: 1.1rem;">Descubriendo el universo</h3>
+          </div>
+          <ul>
+            <li>
+              <a href="../index.html" class="sidebar-link">
+                <i class="fa-solid fa-rocket fa-fw"></i>
+                <span>Inicio / Introducción</span>
+              </a>
+            </li>
+            <li>
+              <a href="./Contenidos.html" class="sidebar-link active">
+                <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                <span>Contenidos</span>
+              </a>
+            </li>
+            <li>
+              <a href="./Files.html" class="sidebar-link">
+                <i class="fa-regular fa-folder fa-fw"></i>
+                <span>Talleres Prácticos</span>
+              </a>
+            </li>
+            <li>
+              <a href="./settings.html" class="sidebar-link">
+                <i class="fa-solid fa-gear fa-fw"></i>
+                <span>Evaluación OVA</span>
+              </a>
+            </li>
+          </ul>
         </div>
 
-        <main style="padding: 20px; color: #ffffff; width: 100%;">
-            <div style="max-width: 900px; margin: 0 auto;">
-                
-                <div style="margin-bottom: 30px; border-bottom: 2px solid #2a2a30; padding-bottom: 15px;">
-                    <h2 style="color: #00bcd4; margin-bottom: 5px;"><i class="fas fa-book-open"></i> Contenidos Conceptuales</h2>
-                    <p style="color: #b0b0b5; font-size: 1.1rem; margin: 0;">Misión Espacial - Grado Sexto (I.E. Aguas Prietas)</p>
-                </div>
-
-                <div class="subtema-container">
-                    <input type="checkbox" id="tema1" class="subtema-checkbox">
-                    <label for="tema1" class="subtema-header">
-                        <span>🌌 1. ¿Qué es el Universo?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </label>
-                    <div class="subtema-content">
-                        <p style="line-height: 1.6; color: #d0d0d5; margin-top: 0;">
-                            El universo es el conjunto de todo lo que existe de forma física: desde las partículas más pequeñas hasta las estructuras más gigantescas como las estrellas, los planetas, las galaxias, la materia entera, la energía y el propio tejido del espacio y del tiempo.
-                        </p>
-                        <img src="../images/universo.jpg" alt="El Universo" class="img-espacio">
-                    </div>
-                </div>
-
-                <div class="subtema-container">
-                    <input type="checkbox" id="tema2" class="subtema-checkbox">
-                    <label for="tema2" class="subtema-header">
-                        <span>🌀 2. Las Galaxias</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </label>
-                    <div class="subtema-content">
-                        <p style="line-height: 1.6; color: #d0d0d5; margin-top: 0;">
-                            Son enormes agrupaciones de miles de millones de estrellas, cuerpos celestes, nubes de gas y polvo cósmico unidos por la fuerza de gravedad. Nuestra galaxia se llama la <strong>Vía Láctea</strong>.
-                        </p>
-                        <img src="../images/galaxias.jpg" alt="Galaxias" class="img-espacio">
-                    </div>
-                </div>
-
-                <div class="subtema-container">
-                    <input type="checkbox" id="tema3" class="subtema-checkbox">
-                    <label for="tema3" class="subtema-header">
-                        <span>☀️ 3. Las Estrellas</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </label>
-                    <div class="subtema-content">
-                        <p style="line-height: 1.6; color: #d0d0d5; margin-top: 0;">
-                            Son enormes esferas de gas caliente que brillan con luz propia gracias a las reacciones nucleares que ocurren en su interior. El <strong>Sol</strong> es nuestra estrella más cercana.
-                        </p>
-                        <img src="../images/estrellas.jpg" alt="Estrellas" class="img-espacio">
-                    </div>
-                </div>
-
-                <div class="subtema-container">
-                    <input type="checkbox" id="tema4" class="subtema-checkbox">
-                    <label for="tema4" class="subtema-header">
-                        <span>🌍 4. Los Planetas</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </label>
-                    <div class="subtema-content">
-                        <p style="line-height: 1.6; color: #d0d0d5; margin-top: 0;">
-                            Son cuerpos celestes opacos que orbitan alrededor de una estrella y tienen forma casi esférica. La Tierra es el tercer planeta del sistema solar.
-                        </p>
-                        <img src="../images/planetas.jpg" alt="Planetas" class="img-espacio">
-                    </div>
-                </div>
-
+        <main style="padding: 20px; color: #ffffff; width: 100%; overflow-y: auto;">
+          <div class="main-content">
+            
+            <div style="margin-bottom: 30px;">
+              <h1 style="color: #ffffff; margin-bottom: 5px;"><i class="fa-solid fa-user-graduate"></i> Estación de Contenidos Teóricos</h1>
+              <p style="color: #b0b0b5; margin-top: 0;">Explora los misterios del cosmos a través de nuestras tres estaciones científicas adaptadas para sexto grado.</p>
             </div>
+
+            <div class="contenido-box">
+              <h2><i class="fa-solid fa-user-astronaut"></i> Estación 1: ¿Qué es el Universo y cuál es su origen?</h2>
+              <p>
+                El Universo es todo lo que existe: el espacio, el tiempo, todos los planetas, las estrellas y las galaxias enteras. Para comprender de dónde salió todo lo que vemos, los científicos crearon la teoría más aceptada:
+              </p>
+              
+              <img src="../images/big-bang.jpg" alt="Representación de la expansión del Big Bang" class="tema-img" onerror="this.src='https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=800'">
+              
+              <ul class="subtema-lista">
+                <li>
+                  <strong>La Teoría del Big Bang:</strong> Explica que hace aproximadamente 13.800 millones de años, todo el universo estaba concentrado en un punto infinitamente pequeño y caliente. De repente, este punto se expandió de forma masiva (como una gran explosión cósmica) y comenzó a enfriarse, permitiendo la formación de la materia y los gases.
+                </li>
+              </ul>
+              
+              <a href="https://spaceplace.nasa.gov/big-bang/sp/" target="_blank" class="btn-fuente">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Investigar más en NASA Space Place
+              </a>
+            </div>
+
+            <div class="contenido-box" style="border-left-color: #ffeb3b;">
+              <h2 style="color: #ffeb3b;"><i class="fa-solid fa-sun"></i> Estación 2: Las Galaxias y las Estrellas</h2>
+              <p>
+                La materia creada tras el Big Bang no se quedó flotando sola; por gravedad, se agrupó en gigantescas ciudades en el espacio.
+              </p>
+              
+              <img src="../images/galaxia.jpg" alt="Imagen de una galaxia espiral en el espacio" class="tema-img" onerror="this.src='https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?q=80&w=800'">
+              
+              <ul class="subtema-lista">
+                <li>
+                  <strong>Las Galaxias:</strong> Son enormes agrupaciones de miles de millones de estrellas, planetas, gas y polvo cósmico. Nosotros vivimos en una galaxia con forma de espiral llamada la <strong>Vía Láctea</strong>.
+                </li>
+                <li>
+                  <strong>Las Estrellas:</strong> Son gigantescas esferas de gas brillante que producen su propia luz y calor. Nuestro <strong>Sol</strong> es la estrella más cercana a la Tierra y la que nos da la energía necesaria para la vida.
+                </li>
+              </ul>
+              
+              <a href="https://spaceplace.nasa.gov/galaxy/sp/" target="_blank" class="btn-fuente">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Buscar galaxias en NASA Space Place
+              </a>
+            </div>
+
+            <div class="contenido-box" style="border-left-color: #4caf50;">
+              <h2 style="color: #4caf50;"><i class="fa-solid fa-earth-americas"></i> Estación 3: Nuestro Sistema Solar</h2>
+              <p>
+                En uno de los brazos de la Vía Láctea se encuentra nuestro hogar: un vecindario espacial gobernado por la fuerza de gravedad del Sol.
+              </p>
+              
+              <img src="../images/sistema solar.png"  alt="Los planetas alineados orbitando alrededor del Sol" class="tema-img" onerror="this.src='https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?q=80&w=800'">
+              
+              <ul class="subtema-lista">
+                <li>
+                  <strong>Los Planetas:</strong> Son cuerpos celestes que orbitan alrededor del Sol. Hay 8 planetas principales divididos en <em>interiores o rocosos</em> (Mercurio, Venus, Tierra, Marte) y <em>exteriores o gaseosos</em> (Júpiter, Saturno, Urano, Neptuno).
+                </li>
+                <li>
+                  <strong>Satélites y Cuerpos Menores:</strong> Los satélites son cuerpos que giran alrededor de los planetas, como nuestra <strong>Luna</strong>. También nos rodean los asteroides y los cometas.
+                </li>
+              </ul>
+              
+              <a href="https://spaceplace.nasa.gov/menu/solar-system/sp/" target="_blank" class="btn-fuente">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Explorar el Sistema Solar en NASA Space Place
+              </a>
+            </div>
+
+          </div>
         </main>
+        
+      </div>
     </div>
-</body>
+  </body>
 </html>
