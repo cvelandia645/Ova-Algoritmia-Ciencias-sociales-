@@ -11,32 +11,86 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&amp;display=swap" rel="stylesheet" />
     <title>Descubriendo el Universo - Inicio</title>
     <style>
-      /* 🚨 PARCHE DE VISIBILIDAD DE EMERGENCIA 🚨 */
+      /* 🚨 PARCHE DE VISIBILIDAD Y FONDO DE ESTRELLAS ELECTRÓNICO 🚨 */
       body, .wrapper, .page-content, main {
         opacity: 1 !important;
         display: flex !important;
         visibility: visible !important;
       }
       
-      /* Ajuste para que el contenido fluya correctamente al lado del menú */
+      /* Fondo general de la página: Espacio profundo con estrellas creadas por CSS */
       .page-content {
         width: 100% !important;
         min-height: 100vh !important;
-        background-color: #121214 !important; /* Asegura el fondo oscuro */
+        background-color: #0b0b12 !important;
+        background-image: 
+          radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+          radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+          radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+        background-size: 550px 550px, 350px 350px, 250px 250px;
+        background-position: 0 0, 40px 60px, 130px 270px;
       }
 
+      /* 🖤 BARRA LATERAL: Totalmente negra, limpia (sin estrellas) y letras azul celeste */
+      .sidebar {
+        background-color: #09090b !important; /* Negro puro */
+        background-image: none !important;     /* Sin estrellas */
+        border-right: 1px solid #1f1f23 !important;
+        min-height: 100vh;
+      }
+
+      /* Título de la barra lateral */
+      .sidebar .brand h3.brand-name {
+        color: #00bcd4 !important; /* Azul celeste */
+        font-weight: bold;
+      }
+      .sidebar .brand i.xmark {
+        color: #00bcd4 !important;
+      }
+
+      /* Enlaces de la barra lateral */
+      .sidebar ul li a.sidebar-link {
+        color: #00bcd4 !important; /* Azul celeste para los textos e iconos */
+        transition: background 0.3s, color 0.3s;
+      }
+
+      /* Iconos específicos dentro de los enlaces */
+      .sidebar ul li a.sidebar-link i {
+        color: #00bcd4 !important; 
+      }
+
+      /* Efecto al pasar el mouse por encima (Hover) */
+      .sidebar ul li a.sidebar-link:hover {
+        background-color: #141419 !important; /* Un gris muy oscuro al seleccionarse */
+        color: #ffffff !important;             /* El texto brilla en blanco */
+      }
+      .sidebar ul li a.sidebar-link:hover i {
+        color: #ffffff !important;
+      }
+
+      /* Clase activa (página actual) */
+      .sidebar ul li a.sidebar-link.active {
+        background-color: #1e1e24 !important;
+        border-left: 4px solid #00bcd4 !important;
+        color: #ffffff !important;
+      }
+      .sidebar ul li a.sidebar-link.active i {
+        color: #00bcd4 !important;
+      }
+
+      /* Estilos del contenido central */
       .intro-banner {
-        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('images/banner-espacio.jpg');
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url('images/banner-espacio.jpg');
         background-size: cover;
         background-position: center;
         padding: 40px 30px;
         border-radius: 10px;
         margin-bottom: 30px;
-        border: 1px solid #3c3c42;
+        border: 1px solid #27272a;
       }
       .card-credito {
-        background-color: #232329;
-        border: 1px solid #3c3c42;
+        background-color: #141417;
+        border: 1px solid #27272a;
         border-radius: 8px;
         padding: 20px;
         text-align: center;
@@ -64,7 +118,6 @@
   </head>
   <body>
     
-    <!-- Añadimos la clase wrapper por si el CSS depende de ella para estructurar -->
     <div class="wrapper">
       <div class="page-content index-page">
         
@@ -111,7 +164,7 @@
               </p>
             </div>
 
-            <div style="background-color: #1e1e24; padding: 25px; border-radius: 8px; border-left: 4px solid #4caf50; margin-bottom: 40px;">
+            <div style="background-color: rgba(30, 30, 36, 0.85); padding: 25px; border-radius: 8px; border-left: 4px solid #4caf50; margin-bottom: 40px; backdrop-filter: blur(5px);">
               <h3 style="color: #4caf50; margin-top: 0;"><i class="fa-solid fa-map-location-dot"></i> Ruta de la Misión: ¿Qué vas a aprender?</h3>
               <p style="line-height: 1.6; color: #d0d0d5;">
                 A lo largo de este entorno virtual interactivo, los estudiantes podrán navegar autónomamente a través de tres grandes estaciones espaciales:
@@ -123,27 +176,27 @@
               </ul>
             </div>
 
-            <div style="border-top: 1px solid #3c3c42; padding-top: 30px; margin-bottom: 20px;">
+            <div style="border-top: 1px solid #27272a; padding-top: 30px; margin-bottom: 20px;">
               <h2 style="color: #ffffff; text-align: center; margin-bottom: 10px;"><i class="fa-solid fa-circle-info"></i> Creadores de la Misión</h2>
               <p style="color: #b0b0b5; text-align: center; margin-bottom: 30px;">Equipo de trabajo encargado del diseño pedagógico y desarrollo técnico de la OVA.</p>
               
               <div class="grid-creditos">
                 
                 <div class="card-credito">
-                  <img src="images/carlos.png" alt="Carlos David Velandia" class="avatar-credito" onerror="this.src='images/avatar.png'">
+                  <img src="images/carlos.jpg" alt="Carlos David Velandia" class="avatar-credito" onerror="this.src='images/avatar.png'">
                   <h3 style="margin: 10px 0 5px 0; color: #fff;">Carlos David Velandia</h3>
-                  <p style="color: #00bcd4; margin: 0 0 10px 0; font-weight: bold; font-size: 0.9rem;">Desarrollador Tecnológico</p>
+                  <p style="color: #00bcd4; margin: 0 0 10px 0; font-weight: bold; font-size: 0.9rem;">Editor de la pagina</p>
                   <p style="color: #b0b0b5; font-size: 0.85rem; line-height: 1.5; margin: 0;">
-                    Responsable del diseño de la interfaz web Estudiante de la univercidad de Cordoba, 
+                    Responsable del diseño de la interfaz web, maquetación adaptativa, programación de menús interactivos y lógica en HTML5 y CSS.
                   </p>
                 </div>
 
                 <div class="card-credito">
-                  <img src="images/gonzalo.png" alt="Profesor Gonzalo Velandia" class="avatar-credito" onerror="this.src='images/avatar.png'">
+                  <img src="images/Profesor Gonzalo.jpg" alt="Profesor Gonzalo Velandia" class="avatar-credito" onerror="this.src='images/avatar.png'">
                   <h3 style="margin: 10px 0 5px 0; color: #fff;">Gonzalo Velandia</h3>
-                  <p style="color: #4caf50; margin: 0 0 10px 0; font-weight: bold; font-size: 0.9rem;">Director Pedagógico</p>
+                  <p style="color: #4caf50; margin: 0 0 10px 0; font-weight: bold; font-size: 0.9rem;">Profesor</p>
                   <p style="color: #b0b0b5; font-size: 0.85rem; line-height: 1.5; margin: 0;">
-                    Docente en el área de Ciencias Sociales. 
+                    Docente experto en el área de Ciencias Sociales. Diseñador del contenido temático, los criterios didácticos y las actividades de la OVA.
                   </p>
                 </div>
 
