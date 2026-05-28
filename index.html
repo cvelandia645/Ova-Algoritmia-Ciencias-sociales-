@@ -11,14 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&amp;display=swap" rel="stylesheet" />
     <title>Descubriendo el Universo - Inicio</title>
     <style>
-      /* 🚨 PARCHE DE VISIBILIDAD Y FONDO DE ESTRELLAS ELECTRÓNICO 🚨 */
+      
       body, .wrapper, .page-content, main {
         opacity: 1 !important;
         display: flex !important;
         visibility: visible !important;
       }
       
-      /* Fondo general de la página: Espacio profundo con estrellas creadas por CSS */
+      
       .page-content {
         width: 100% !important;
         min-height: 100vh !important;
@@ -31,17 +31,17 @@
         background-position: 0 0, 40px 60px, 130px 270px;
       }
 
-      /* 🖤 BARRA LATERAL: Totalmente negra, limpia (sin estrellas) y letras azul celeste */
+      /* BARRA LATERAL */
       .sidebar {
-        background-color: #09090b !important; /* Negro puro */
-        background-image: none !important;     /* Sin estrellas */
+        background: linear-gradient(to bottom, #09090b 0%, #0d1117 100%) !important;
+        background-image: linear-gradient(to bottom, #09090b 0%, #1e5bb8 100%) !important;
         border-right: 1px solid #1f1f23 !important;
         min-height: 100vh;
       }
 
       /* Título de la barra lateral */
       .sidebar .brand h3.brand-name {
-        color: #00bcd4 !important; /* Azul celeste */
+        color: #00bcd4 !important; 
         font-weight: bold;
       }
       .sidebar .brand i.xmark {
@@ -50,7 +50,7 @@
 
       /* Enlaces de la barra lateral */
       .sidebar ul li a.sidebar-link {
-        color: #00bcd4 !important; /* Azul celeste para los textos e iconos */
+        color: #00bcd4 !important; 
         transition: background 0.3s, color 0.3s;
       }
 
@@ -59,16 +59,14 @@
         color: #00bcd4 !important; 
       }
 
-      /* Efecto al pasar el mouse por encima (Hover) */
       .sidebar ul li a.sidebar-link:hover {
-        background-color: #141419 !important; /* Un gris muy oscuro al seleccionarse */
-        color: #ffffff !important;             /* El texto brilla en blanco */
+        background-color: #141419 !important; 
+        color: #ffffff !important;             
       }
       .sidebar ul li a.sidebar-link:hover i {
         color: #ffffff !important;
       }
 
-      /* Clase activa (página actual) */
       .sidebar ul li a.sidebar-link.active {
         background-color: #1e1e24 !important;
         border-left: 4px solid #00bcd4 !important;
@@ -78,7 +76,6 @@
         color: #00bcd4 !important;
       }
 
-      /* Estilos del contenido central */
       .intro-banner {
         background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url('images/banner-espacio.jpg');
         background-size: cover;
