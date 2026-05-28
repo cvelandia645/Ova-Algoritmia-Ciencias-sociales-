@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
+    <title>Contenidos - El Universo</title>
+    <style>
+        .subtema-container {
+            margin-bottom: 15px;
+            background: #232329;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #3c3c42;
+        }
+        .subtema-checkbox {
+            display: none;
+        }
+        .subtema-header {
+            padding: 18px 20px;
+            background: #1e1e24;
+            color: #ffffff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .subtema-header:hover {
+            background: #2d2d35;
+            color: #00bcd4;
+        }
+        .subtema-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.3s ease;
+            padding: 0 20px;
+            background: #232329;
+        }
+        .subtema-checkbox:checked ~ .subtema-content {
+            max-height: 1000px;
+            padding: 20px;
+            border-top: 1px solid #3c3c42;
+        }
+        .subtema-checkbox:checked ~ .subtema-header i {
+            transform: rotate(180deg);
+            color: #00bcd4;
+        }
+        .subtema-header i {
+            transition: transform 0.3s;
+        }
+        .img-espacio {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-top: 15px;
+            border: 2px solid #3c3c42;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <div class="sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-xmark xmark"></i>
+                <h3 class="brand-name">Zana</h3>
+            </div>
+            <ul>
+                <li>
+                    <a href="../index.html" class="sidebar-link">
+                        <i class="fa-regular fa-chart-bar fa-fw"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./Contenidos.html" class="sidebar-link active">
+                        <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                        <span>Contenidos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./Files.html" class="sidebar-link">
+                        <i class="fa-regular fa-folder fa-fw"></i>
+                        <span>Talleres Prácticos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./settings.html" class="sidebar-link">
+                        <i class="fa-solid fa-gear fa-fw"></i>
+                        <span>Evaluación OVA</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <main style="padding: 20px; color: #ffffff; width: 100%;">
+            <div style="max-width: 900px; margin: 0 auto;">
+                
+                <div style="margin-bottom: 30px; border-bottom: 2px solid #2a2a30; padding-bottom: 15px;">
+                    <h2 style="color: #00bcd4; margin-bottom: 5px;"><i class="fas fa-book-open"></i> Contenidos Conceptuales</h2>
+                    <p style="color: #b0b0b5; font-size: 1.1rem; margin: 0;">Misión Espacial - Grado Sexto (I.E. Aguas Prietas)</p>
+                </div>
+
+                <div class="subtema-container">
+                    <input type="checkbox" id="tema1" class="subtema-checkbox">
+                    <label for="tema1" class="subtema-header">
+                        <span>🌌 1. ¿Qué es el Universo?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </label>
+                    <div class="subtema-content">
+                        <p style="line-height: 1.6; color: #d0d0d5; margin-top: 0;">
+                            El universo es el conjunto de todo lo que existe de forma física: desde las partículas más pequeñas hasta las estructuras más gigantescas como las estrellas, los planetas, las galaxias, la materia entera, la energía y el propio tejido del espacio y del tiempo.
+                        </p>
+                        <img src="../images/universo.jpg" alt="El Universo" class="img-espacio">
+                    </div>
+                </div>
+
+                <div class="subtema-container">
+                    <input type="checkbox" id="tema2" class="subtema-checkbox">
+                    <label for="tema2" class="subtema-header">
+                        <span>🌀 2. Las Galaxias</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </label>
+                    <div class="subtema-content">
+                        <p style="line-height: 1.6; color: #d0d0d5; margin-top: 0;">
+                            Son enormes agrupaciones de miles de millones de estrellas, cuerpos celestes, nubes de gas y polvo cósmico unidos por la fuerza de gravedad. Nuestra galaxia se llama la <strong>Vía Láctea</strong>.
+                        </p>
+                        <img src="../images/galaxias.jpg" alt="Galaxias" class="img-espacio">
+                    </div>
+                </div>
+
+                <div class="subtema-container">
+                    <input type="checkbox" id="tema3" class="subtema-checkbox">
+                    <label for="tema3" class="subtema-header">
+                        <span>☀️ 3. Las Estrellas</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </label>
+                    <div class="subtema-content">
+                        <p style="line-height: 1.6; color: #d0d0d5; margin-top: 0;">
+                            Son enormes esferas de gas caliente que brillan con luz propia gracias a las reacciones nucleares que ocurren en su interior. El <strong>Sol</strong> es nuestra estrella más cercana.
+                        </p>
+                        <img src="../images/estrellas.jpg" alt="Estrellas" class="img-espacio">
+                    </div>
+                </div>
+
+                <div class="subtema-container">
+                    <input type="checkbox" id="tema4" class="subtema-checkbox">
+                    <label for="tema4" class="subtema-header">
+                        <span>🌍 4. Los Planetas</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </label>
+                    <div class="subtema-content">
+                        <p style="line-height: 1.6; color: #d0d0d5; margin-top: 0;">
+                            Son cuerpos celestes opacos que orbitan alrededor de una estrella y tienen forma casi esférica. La Tierra es el tercer planeta del sistema solar.
+                        </p>
+                        <img src="../images/planetas.jpg" alt="Planetas" class="img-espacio">
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

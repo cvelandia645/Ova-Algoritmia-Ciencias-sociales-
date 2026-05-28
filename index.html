@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&amp;display=swap" rel="stylesheet" />
+    <title>Descubriendo el Universo - Inicio</title>
+    <style>
+      /* 🚨 PARCHE DE VISIBILIDAD DE EMERGENCIA 🚨 */
+      body, .wrapper, .page-content, main {
+        opacity: 1 !important;
+        display: flex !important;
+        visibility: visible !important;
+      }
+      
+      /* Ajuste para que el contenido fluya correctamente al lado del menú */
+      .page-content {
+        width: 100% !important;
+        min-height: 100vh !important;
+        background-color: #121214 !important; /* Asegura el fondo oscuro */
+      }
+
+      .intro-banner {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('images/banner-espacio.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 40px 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        border: 1px solid #3c3c42;
+      }
+      .card-credito {
+        background-color: #232329;
+        border: 1px solid #3c3c42;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+      .card-credito:hover {
+        transform: translateY(-5px);
+        border-color: #00bcd4;
+      }
+      .avatar-credito {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 3px solid #00bcd4;
+      }
+      .grid-creditos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- Añadimos la clase wrapper por si el CSS depende de ella para estructurar -->
+    <div class="wrapper">
+      <div class="page-content index-page">
+        
+        <div class="sidebar">
+          <div class="brand">
+            <i class="fa-solid fa-xmark xmark"></i>
+            <h3 class="brand-name" style="font-size: 1.1rem;">Descubriendo el universo</h3>
+          </div>
+          <ul>
+            <li>
+              <a href="index.html" class="sidebar-link active">
+                <i class="fa-solid fa-rocket fa-fw"></i>
+                <span>Inicio / Introducción</span>
+              </a>
+            </li>
+            <li>
+              <a href="./pages/Contenidos.html" class="sidebar-link">
+                <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                <span>Contenidos</span>
+              </a>
+            </li>
+            <li>
+              <a href="./pages/Files.html" class="sidebar-link">
+                <i class="fa-regular fa-folder fa-fw"></i>
+                <span>Talleres Prácticos</span>
+              </a>
+            </li>
+            <li>
+              <a href="./pages/settings.html" class="sidebar-link">
+                <i class="fa-solid fa-gear fa-fw"></i>
+                <span>Evaluación OVA</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <main style="padding: 20px; color: #ffffff; width: 100%; overflow-y: auto;">
+          <div class="main-content">
+            
+            <div class="intro-banner">
+              <h1 style="color: #00bcd4; margin-top: 0;"><i class="fa-solid fa-user-astronaut"></i> ¡Bienvenidos a la Misión Espacial!</h1>
+              <p style="font-size: 1.15rem; line-height: 1.6; color: #e0e0e5; max-width: 800px;">
+                Esta Objeto Virtual de Aprendizaje (OVA) está diseñada especialmente para los estudiantes de <strong>Grado Sexto de la Institución Educativa de Aguas Prietas</strong>. Nuestro objetivo es emprender un viaje fascinante a través del cosmos para explorar y comprender las leyes, materias y cuerpos celestes que dan forma a todo lo que nos rodea.
+              </p>
+            </div>
+
+            <div style="background-color: #1e1e24; padding: 25px; border-radius: 8px; border-left: 4px solid #4caf50; margin-bottom: 40px;">
+              <h3 style="color: #4caf50; margin-top: 0;"><i class="fa-solid fa-map-location-dot"></i> Ruta de la Misión: ¿Qué vas a aprender?</h3>
+              <p style="line-height: 1.6; color: #d0d0d5;">
+                A lo largo de este entorno virtual interactivo, los estudiantes podrán navegar autónomamente a través de tres grandes estaciones espaciales:
+              </p>
+              <ul style="line-height: 1.8; color: #d0d0d5; padding-left: 20px; margin-bottom: 0;">
+                <li><strong style="color: #00bcd4;">1. Estación de Contenidos:</strong> Un módulo dinámico y desplegable donde descubrirás qué es el Universo, cómo se estructuran las galaxias (como nuestra Vía Láctea), el comportamiento de las estrellas, planetas, satélites y cuerpos menores.</li>
+                <li><strong style="color: #ffeb3b;">2. Laboratorio Creativo:</strong> Un espacio para poner en práctica la imaginación y la conciencia ecológica, construyendo maquetas planetarias a escala con materiales reciclables desde casa.</li>
+                <li><strong style="color: #f44336;">3. Evaluación y Autoevaluación:</strong> Un reto final interactivo para medir los conocimientos adquiridos y reflexionar sobre tu propio proceso de aprendizaje científico.</li>
+              </ul>
+            </div>
+
+            <div style="border-top: 1px solid #3c3c42; padding-top: 30px; margin-bottom: 20px;">
+              <h2 style="color: #ffffff; text-align: center; margin-bottom: 10px;"><i class="fa-solid fa-circle-info"></i> Creadores de la Misión</h2>
+              <p style="color: #b0b0b5; text-align: center; margin-bottom: 30px;">Equipo de trabajo encargado del diseño pedagógico y desarrollo técnico de la OVA.</p>
+              
+              <div class="grid-creditos">
+                
+                <div class="card-credito">
+                  <img src="images/carlos.png" alt="Carlos David Velandia" class="avatar-credito" onerror="this.src='images/avatar.png'">
+                  <h3 style="margin: 10px 0 5px 0; color: #fff;">Carlos David Velandia</h3>
+                  <p style="color: #00bcd4; margin: 0 0 10px 0; font-weight: bold; font-size: 0.9rem;">Desarrollador Tecnológico</p>
+                  <p style="color: #b0b0b5; font-size: 0.85rem; line-height: 1.5; margin: 0;">
+                    Responsable del diseño de la interfaz web, maquetación adaptativa, programación de menús interactivos y lógica en HTML5 y CSS.
+                  </p>
+                </div>
+
+                <div class="card-credito">
+                  <img src="images/gonzalo.png" alt="Profesor Gonzalo Velandia" class="avatar-credito" onerror="this.src='images/avatar.png'">
+                  <h3 style="margin: 10px 0 5px 0; color: #fff;">Gonzalo Velandia</h3>
+                  <p style="color: #4caf50; margin: 0 0 10px 0; font-weight: bold; font-size: 0.9rem;">Director Pedagógico</p>
+                  <p style="color: #b0b0b5; font-size: 0.85rem; line-height: 1.5; margin: 0;">
+                    Docente experto en el área de Ciencias Sociales. Diseñador del contenido temático, los criterios didácticos y las actividades de la OVA.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </main>
+        
+      </div>
+    </div>
+  </body>
+</html>
