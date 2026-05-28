@@ -2621,3 +2621,177 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
 .main-content .plans-boxes .plan-box ul li:last-child p {
   color: var(--third-color);
 }
+/* ==========================================================================
+   🌌 NÚCLEO ESPACIAL - REGLAS GENERALES DE VISIBILIDAD DE LA OVA
+   ========================================================================== */
+body, .wrapper, .page-content, main {
+  opacity: 1 !important;
+  display: flex !important;
+  visibility: visible !important;
+}
+
+.page-content {
+  width: 100% !important;
+  min-height: 100vh !important;
+  background-color: #0b0b12 !important;
+  background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+  background-size: 550px 550px, 350px 350px, 250px 250px;
+  background-position: 0 0, 40px 60px, 130px 270px;
+}
+
+/*  BARRA LATERAL */
+.sidebar {
+  background: linear-gradient(to bottom, #09090b 0%, #1a3d72 100%) !important;
+  background-image: linear-gradient(to bottom, #09090b 0%, #1a3d72 100%) !important;
+  border-right: 1px solid #1f1f23 !important;
+  min-height: 100vh;
+  flex-shrink: 0;
+}
+.sidebar .brand h3.brand-name {
+  color: #00bcd4 !important;
+  font-weight: bold;
+}
+.sidebar .brand i.xmark {
+  color: #00bcd4 !important;
+}
+.sidebar ul li a.sidebar-link {
+  color: #00bcd4 !important;
+  transition: background 0.3s, color 0.3s;
+}
+.sidebar ul li a.sidebar-link i {
+  color: #00bcd4 !important; 
+}
+.sidebar ul li a.sidebar-link:hover {
+  background-color: #141419 !important;
+  color: var(--white-color) !important;
+}
+.sidebar ul li a.sidebar-link:hover i {
+  color: var(--white-color) !important;
+}
+.sidebar ul li a.sidebar-link.active {
+  background-color: #1e1e24 !important;
+  border-left: 4px solid #00bcd4 !important;
+  color: var(--white-color) !important;
+}
+.sidebar ul li a.sidebar-link.active i {
+  color: #00bcd4 !important;
+}
+
+/*  CONTENIDOS  */
+.contenido-box {
+  background-color: rgba(20, 20, 23, 0.9);
+  border: 1px solid #27272a;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(5px);
+  border-left: 4px solid #00bcd4;
+}
+.contenido-box h2 {
+  color: #00bcd4;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+}
+.contenido-box p {
+  color: #e0e0e5;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.tema-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 15px 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.subtema-lista {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+.subtema-lista li {
+  background: rgba(255, 255, 255, 0.03);
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #d0d0d5;
+}
+.subtema-lista strong {
+  color: #ffeb3b; 
+}
+
+.btn-fuente {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1e293b;
+  color: #00bcd4 !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 15px;
+  border: 1px solid rgba(0, 188, 212, 0.3);
+  transition: all 0.3s ease;
+}
+.btn-fuente:hover {
+  background-color: #00bcd4;
+  color: #09090b !important;
+  border-color: #00bcd4;
+}
+
+/*  EVALUACIÓN INTERACTIVA H5P */
+.h5p-container {
+  background-color: rgba(20, 20, 23, 0.9);
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  padding: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  overflow: hidden;
+  max-width: 900px;
+}
+
+.h5p-container iframe {
+  width: 100% !important;
+  height: 320px !important; 
+  min-height: 320px !important;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--white-color);
+}
+/* SECCIÓN DE CRÉDITOS Y AVATARES (PÁGINA DE INICIO) */
+.card-credito {
+  background-color: rgba(20, 20, 23, 0.8);
+  border: 1px solid #27272a;
+  border-radius: var(--first-radius); 
+  padding: var(--secondary-padding);  
+  text-align: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.avatar-credito {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%; 
+  border: 3px solid #00bcd4; 
+  background-color: #141419;
+  padding: 4px; /
+  margin: 0 auto 10px auto;
+  display: block;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.3); 
+}

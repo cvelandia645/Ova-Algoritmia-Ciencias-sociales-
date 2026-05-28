@@ -10,89 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&amp;display=swap" rel="stylesheet" />
     <title>Descubriendo el Universo - Evaluación H5P</title>
-    <style>
-      /* PARCHE DE VISIBILIDAD Y FONDO DE ESTRELLAS */
-      body, .wrapper, .page-content, main {
-        opacity: 1 !important;
-        display: flex !important;
-        visibility: visible !important;
-      }
-      
-      .page-content {
-        width: 100% !important;
-        min-height: 100vh !important;
-        background-color: #0b0b12 !important;
-        background-image: 
-          radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-          radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-          radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
-        background-size: 550px 550px, 350px 350px, 250px 250px;
-        background-position: 0 0, 40px 60px, 130px 270px;
-      }
-
-      /* 🖤 BARRA LATERAL: Degradado de negro a azul espacial profundo */
-      .sidebar {
-        background: linear-gradient(to bottom, #09090b 0%, #0d1117 100%) !important;
-        background-image: linear-gradient(to bottom, #09090b 0%, #1a3d72 100%) !important;
-        border-right: 1px solid #1f1f23 !important;
-        min-height: 100vh;
-      }
-      .sidebar .brand h3.brand-name {
-        color: #00bcd4 !important;
-        font-weight: bold;
-      }
-      .sidebar .brand i.xmark {
-        color: #00bcd4 !important;
-      }
-      .sidebar ul li a.sidebar-link {
-        color: #00bcd4 !important;
-        transition: background 0.3s, color 0.3s;
-      }
-      .sidebar ul li a.sidebar-link i {
-        color: #00bcd4 !important; 
-      }
-      .sidebar ul li a.sidebar-link:hover {
-        background-color: #141419 !important;
-        color: #ffffff !important;
-      }
-      .sidebar ul li a.sidebar-link:hover i {
-        color: #ffffff !important;
-      }
-      .sidebar ul li a.sidebar-link.active {
-        background-color: #1e1e24 !important;
-        border-left: 4px solid #00bcd4 !important;
-        color: #ffffff !important;
-      }
-      .sidebar ul li a.sidebar-link.active i {
-        color: #00bcd4 !important;
-      }
-
-      /* CONTENEDOR FLUIDO PARA EL JUEGO H5P */
-      .h5p-container {
-        background-color: rgba(20, 20, 23, 0.9);
-        border: 1px solid #27272a;
-        border-radius: 12px;
-        padding: 15px;
-        backdrop-filter: blur(5px);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-        margin-top: 20px;
-        overflow: hidden;
-      }
-      
-      /* Ajuste para que el iframe sea responsivo y se adapte a las pantallas */
-      .h5p-iframe {
-        width: 100%;
-        height: 600px; /* Puedes cambiar la altura según el tamaño de tu recurso H5P */
-        border: none;
-        border-radius: 8px;
-        background-color: #ffffff; /* Fondo blanco por si el H5P lo requiere */
-      }
-    </style>
   </head>
   <body>
     <div class="wrapper">
       <div class="page-content">
         
+        <!-- BARRA LATERAL -->
         <div class="sidebar">
           <div class="brand">
             <i class="fa-solid fa-xmark xmark"></i>
@@ -106,21 +29,28 @@
           </ul>
         </div>
 
-        <main style="padding: 20px; color: #ffffff; width: 100%; overflow-y: auto;">
+        <!-- CONTENIDO CENTRAL DE LA EVALUACIÓN -->
+        <main style="padding: 20px; color: #ffffff; flex-grow: 1; overflow-y: auto;">
           <div class="main-content">
             <div style="margin-bottom: 20px;">
               <h1 style="color: #00bcd4; margin-bottom: 5px;"><i class="fa-solid fa-gamepad"></i> Misión de Evaluación Interactiva</h1>
               <p style="color: #b0b0b5; margin-top: 0;">Demuestra tus conocimientos resolviendo el siguiente reto interactivo.</p>
             </div>
 
-            <!-- CONTENEDOR DEL IFRAME DE H5P -->
+            <!-- CONTENEDOR DEL IFRAME DE H5P LIMPIO Y CORREGIDO -->
             <div class="h5p-container">
-              <iframe src="https://h5p.org/h5p/embed/1563297" width="1091" height="270" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="¿Cuánto sabes del Universo¿Cuánto sabes del Universo??"></iframe><script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>" 
+              <iframe 
+                src="https://h5p.org/h5p/embed/1563297" 
+                allowfullscreen="allowfullscreen" 
+                allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" 
+                title="¿Cuánto sabes del Universo?">
               </iframe>
+              <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
             </div>
 
           </div>
         </main>
+        
       </div>
     </div>
     <script src="../js/script.js"></script>
