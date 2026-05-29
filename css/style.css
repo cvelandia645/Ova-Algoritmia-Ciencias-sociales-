@@ -2649,6 +2649,7 @@ body, .wrapper, .page-content, main {
   border-right: 1px solid #1f1f23 !important;
   min-height: 100vh;
   flex-shrink: 0;
+  width: 250px !important;
 }
 .sidebar .brand h3.brand-name {
   color: #00bcd4 !important;
@@ -2752,25 +2753,67 @@ body, .wrapper, .page-content, main {
 }
 
 /* EVALUACIÓN INTERACTIVA H5P */
+body {
+  background-color: #0b0b12 !important;
+}
+
+/* Base de la página interactiva */
+.evaluacion-page {
+  display: flex !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #0b0b12 !important;
+  background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px) !important;
+  background-size: 550px 550px, 350px 350px, 250px 250px !important;
+  background-position: 0 0, 40px 60px, 130px 270px !important;
+}
+
+/* El bloque principal ahora se expande y centra su contenido interior */
+.evaluacion-main {
+  flex-grow: 1 !important;
+  min-width: 0 !important;
+  height: 100vh !important;
+  padding: 40px 20px !important; /* Más espacio arriba y abajo */
+  overflow-y: auto !important;
+  background-color: transparent !important;
+  
+  /* Centrado mágico del contenido */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* Centra horizontalmente todo lo que esté dentro */
+}
+
+/* Contenedor del título alineado con el ancho del iframe */
+.evaluacion-main > div:first-child {
+  width: 100% !important;
+  max-width: 1000px !important; /* Alineado con el contenedor del juego */
+  text-align: left !important;
+}
+
+/* Caja de diseño para el iFrame de H5P (ocupa el centro real de la pantalla) */
 .h5p-container {
-  background-color: rgba(20, 20, 23, 0.9);
-  border: 1px solid #27272a;
-  border-radius: 12px;
-  padding: 15px;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-  margin-top: 20px;
-  overflow: hidden;
-  max-width: 900px;
+  background-color: rgba(20, 20, 23, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  backdrop-filter: blur(8px) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+  margin-top: 15px !important;
+  max-width: 1000px !important; /* Limita el ancho para que no se estire feo */
+  width: 100% !important;
 }
 
 .h5p-container iframe {
   width: 100% !important;
-  height: 320px !important;
-  min-height: 320px !important;
-  border: none;
-  border-radius: 8px;
-  background-color: var(--white-color);
+  height: 650px !important; /* Altura perfecta para que jueguen los alumnos sin problemas */
+  border: none !important;
+  border-radius: 8px !important;
+  background-color: #ffffff !important;
 }
 
 /* SECCIÓN DE CRÉDITOS Y AVATARES (PÁGINA DE INICIO) */
@@ -2795,4 +2838,66 @@ body, .wrapper, .page-content, main {
   margin: 0 auto 10px auto;
   display: block;
   box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+}
+/* para los celulares*/
+@media (max-width: 768px) {
+  /* Hacemos que la estructura pase de columnas a una sola fila vertical */
+  .page-content.index-page,
+  .evaluacion-page {
+    flex-direction: column !important;
+  }
+
+  /* La barra lateral ahora se adapta al ancho del celular */
+  .sidebar {
+    width: 100% !important;
+    height: auto !important;
+    position: relative !important;
+    padding: 15px !important;
+  }
+
+  .sidebar ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    justify-content: center !important;
+  }
+
+  .sidebar ul li {
+    margin-bottom: 0 !important;
+  }
+
+  .sidebar-link {
+    padding: 8px 12px !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* El contenido principal toma todo el espacio y evita desbordes */
+  main, 
+  .evaluacion-main {
+    width: 100% !important;
+    padding: 15px !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Ajustamos las cajas del juego H5P para que no se salgan de la pantalla */
+  .h5p-container {
+    padding: 10px !important;
+    margin-top: 10px !important;
+    border-radius: 8px !important;
+  }
+
+  .h5p-container iframe {
+    height: 450px !important; /* Altura más cómoda para pantallas táctiles */
+  }
+
+  /* Ajustamos los títulos para que no se vean gigantes en teléfonos */
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Ajuste para las imágenes de los temas en Contenidos.html */
+  .tema-img {
+    width: 100% !important;
+    height: auto !important;
+  }
 }
