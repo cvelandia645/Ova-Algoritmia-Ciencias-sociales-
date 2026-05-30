@@ -50,11 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (menuToggle && sidebarUl) {
     menuToggle.addEventListener("click", function (e) {
-      e.stopPropagation(); // Evita que el menú se cierre inmediatamente al hacer clic
+      e.stopPropagation(); // Evita que se cierre de inmediato
       sidebarUl.classList.toggle("open");
+      console.log("¡Botón Menú presionado en celular!"); // Pista para pruebas
     });
 
-    // Cierra el menú automáticamente si el estudiante toca cualquier otra parte de la pantalla
+    // Cierra el menú si el estudiante toca fuera de la barra superior
     document.addEventListener("click", function (e) {
       if (!sidebarUl.contains(e.target) && e.target !== menuToggle) {
         sidebarUl.classList.remove("open");
