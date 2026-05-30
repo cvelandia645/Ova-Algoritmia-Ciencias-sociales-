@@ -2846,7 +2846,6 @@ body {
 }
 /* para los celulares*/
 @media (max-width: 768px) {
-  
   body, 
   .wrapper, 
   .page-content {
@@ -2863,11 +2862,13 @@ body {
     height: auto !important; 
     min-height: auto !important;
     position: relative !important; 
+    transform: none !important; 
     padding: 12px 15px !important;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
     border-right: none !important;
     border-bottom: 1px solid #1f1f23 !important;
-    z-index: 999;
+    z-index: 999 !important;
+    display: block !important;
   }
 
   .sidebar .brand {
@@ -2877,7 +2878,6 @@ body {
     width: 100% !important;
   }
   
-  /* Ocultamos la 'X' vieja */
   .sidebar .brand i.xmark {
     display: none !important;
   }
@@ -2923,6 +2923,7 @@ body {
     font-size: 0.9rem !important;
     border-radius: 6px !important;
     background: rgba(255, 255, 255, 0.02) !important;
+    width: 100% !important;
   }
 
   main, 
@@ -2951,6 +2952,42 @@ body {
 
   h1 { font-size: 1.4rem !important; }
   .tema-img { width: 100% !important; height: auto !important; }
+}
+
+.header-seccion h1 {
+  color: #00bcd4 !important; 
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.header-seccion p {
+  color: #e2e8f0 !important; 
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.planetas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.planetas-grid .card-credito {
+  text-align: left !important;
+  padding: 20px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.planetas-grid .btn-fuente {
+  margin-top: 15px !important;
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
 }
 .header-seccion h1 {
   color: #00bcd4 !important; 
