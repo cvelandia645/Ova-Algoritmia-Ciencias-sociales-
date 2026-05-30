@@ -2848,25 +2848,24 @@ body {
 @media (max-width: 768px) {
   body, 
   .wrapper, 
-  .page-content,
-  main,
-  .evaluacion-main {
-    height: auto !important;
-    min-height: 100vh !important;
-    overflow-y: visible !important;
-    overflow-x: hidden !important;
-  }
+  .page-content {
+        display: flex !important;
+        flex-direction: column !important; 
+        height: auto !important;
+    }
 
-.page-content.index-page,
+ .page-content.index-page,
   .evaluacion-page {
     flex-direction: column !important;
   }
   .sidebar {
-    width: 100% !important;
-    height: auto !important;
-    position: relative !important;
-    padding: 15px !important;
-  }
+        width: 100% !important; 
+        height: auto !important; 
+        position: relative !important; 
+        padding: 15px !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+    }
+  
   .sidebar ul {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -2876,6 +2875,13 @@ body {
 
   .sidebar ul li {
     margin-bottom: 0 !important;
+  }
+  .sidebar nav ul {
+        display: flex !important;
+        flex-direction: row !important; /* Los pone uno al lado del otro si caben */
+        flex-wrap: wrap !important; /* Si no caben, saltan de línea de forma organizada */
+        gap: 10px !important;
+        justify-content: center !important;
   }
 
   .sidebar-link {
@@ -2887,6 +2893,11 @@ body {
     width: 100% !important;
     padding: 15px !important;
   }
+  main, .main-content { 
+        width: 100% !important;
+        padding: 15px !important;
+        margin-left: 0 !important; /* Eliminamos márgenes que empujen el contenido */
+    }
   .planetas-grid,
   .talleres-grid {
     display: flex !important;
