@@ -2623,15 +2623,15 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
 }
 /*  NÚCLEO ESPACIAL - REGLAS GENERALES DE VISIBILIDAD DE LA OVA*/
 body, .wrapper, .page-content, main {
-  opacity: 1 !important;
-  display: flex !important;
-  visibility: visible !important;
+  opacity: 1 ;
+  display: flex ;
+  visibility: visible ;
 }
 
 .page-content {
-  width: 100% !important;
-  min-height: 100vh !important;
-  background-color: #0b0b12 !important;
+  width: 100% ;
+  min-height: 100vh ;
+  background-color: #0b0b12 ;
   background-image: 
     radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
     radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
@@ -2643,40 +2643,40 @@ body, .wrapper, .page-content, main {
 /*  BARRA LATERAL */
 .sidebar {
   
-  background-image: linear-gradient(to bottom, #09090b 0%, #1a3d72 100%) !important;
-  border-right: 1px solid #1f1f23 !important;
+  background-image: linear-gradient(to bottom, #09090b 0%, #1a3d72 100%) ;
+  border-right: 1px solid #1f1f23 ;
   min-height: 100vh;
   flex-shrink: 0;
-  width: 250px !important;
+  width: 250px ;
 }
 .sidebar .brand h3.brand-name {
-  color: #00bcd4 !important;
+  color: #00bcd4 ;
   font-weight: bold;
 }
 .sidebar .brand i.xmark {
-  color: #00bcd4 !important;
+  color: #00bcd4 ;
 }
 .sidebar ul li a.sidebar-link {
-  color: #00bcd4 !important;
+  color: #00bcd4 ;
   transition: background 0.3s, color 0.3s;
 }
 .sidebar ul li a.sidebar-link i {
-  color: #00bcd4 !important; 
+  color: #00bcd4 ; 
 }
 .sidebar ul li a.sidebar-link:hover {
-  background-color: #141419 !important;
-  color: var(--white-color) !important;
+  background-color: #141419 ;
+  color: var(--white-color) ;
 }
 .sidebar ul li a.sidebar-link:hover i {
-  color: var(--white-color) !important;
+  color: var(--white-color) ;
 }
 .sidebar ul li a.sidebar-link.active {
-  background-color: #1e1e24 !important;
-  border-left: 4px solid #00bcd4 !important;
-  color: var(--white-color) !important;
+  background-color: #1e1e24 ;
+  border-left: 4px solid #00bcd4 ;
+  color: var(--white-color) ;
 }
 .sidebar ul li a.sidebar-link.active i {
-  color: #00bcd4 !important;
+  color: #00bcd4;
 }
 
 /*  CONTENIDOS  */
@@ -2734,7 +2734,7 @@ body, .wrapper, .page-content, main {
   align-items: center;
   gap: 8px;
   background-color: #1e293b;
-  color: #00bcd4 !important;
+  color: #00bcd4;
   padding: 8px 16px;
   border-radius: 6px;
   text-decoration: none;
@@ -2746,7 +2746,7 @@ body, .wrapper, .page-content, main {
 }
 .btn-fuente:hover {
   background-color: #00bcd4;
-  color: #09090b !important;
+  color: #09090b;
   border-color: #00bcd4;
 }
 .astro-thumb {
@@ -2759,74 +2759,65 @@ body, .wrapper, .page-content, main {
 }
 /* EVALUACIÓN INTERACTIVA H5P */
 body {
-  background-color: #0b0b12 !important;
+  background-color: #0b0b12;
 }
 
 /* Base de la página interactiva */
 .evaluacion-page {
-  display: flex !important;
-  width: 100% !important;
-  min-height: 100vh !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  background-color: #0b0b12 !important;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #0b0b12;
   background-image: 
     radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
     radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px) !important;
-  background-size: 550px 550px, 350px 350px, 250px 250px !important;
-  background-position: 0 0, 40px 60px, 130px 270px !important;
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+  background-size: 550px 550px, 350px 350px, 250px 250px;
+  background-position: 0 0, 40px 60px, 130px 270px;
 }
 
 .evaluacion-main {
-  flex-grow: 1 !important;
-  min-width: 0 !important;
-  height: auto !important; 
-  min-height: 100vh !important;
-  
-  /* 🛠️ CAMBIO SÚPER CLAVE: Agregamos un margen izquierdo de 220px */
-  /* Esto obliga a todo el bloque a nacer DEBAJO/AL LADO de la barra de PC */
-  margin-left: 220px !important; 
-  
-  padding: 40px 30px !important; 
-  background-color: transparent !important;
-  
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important; 
-  box-sizing: border-box !important;
+  flex-grow: 1;
+  min-width: 0;
+  height: auto; 
+  min-height: 100vh;
+  margin-left: 220px; /* Espacio exacto para la barra lateral fija */
+  padding: 40px 30px; 
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  box-sizing: border-box;
 }
 
-/* Contenedor del título de la evaluación */
 .evaluacion-main > div:first-child {
-  width: 100% !important;
-  max-width: 900px !important; /* Un ancho más estilizado y estándar */
-  text-align: left !important;
-  margin-bottom: 10px !important;
+  width: 100%;
+  max-width: 900px; 
+  text-align: left;
 }
 
-/* Caja de diseño para el iFrame de H5P */
 .h5p-container {
-  background-color: rgba(20, 20, 23, 0.7) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 12px !important;
-  padding: 20px !important;
-  backdrop-filter: blur(8px) !important;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
-  margin: 15px auto 0 auto !important; 
-  max-width: 900px !important;          
-  width: 100% !important;
-  box-sizing: border-box !important;
+  background-color: rgba(20, 20, 23, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  margin: 15px auto 0 auto;
+  max-width: 900px; 
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* El iFrame interno del juego interactivo */
 .h5p-container iframe {
-  width: 100% !important;
-  max-width: 100% !important; 
-  height: 650px !important; 
-  border: none !important;
-  border-radius: 8px !important;
-  background-color: #ffffff !important;
+  width: 100%;
+  max-width: 100%; 
+  height: 650px; 
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
 }
 
 /* SECCIÓN DE CRÉDITOS Y AVATARES (PÁGINA DE INICIO) */
@@ -2858,123 +2849,122 @@ body {
   .wrapper, 
   .page-content,
   .evaluacion-page {   
-    display: flex !important;
-    flex-direction: column !important; 
-    height: auto !important;
-    min-height: 100vh !important;
-    overflow-y: visible !important;
-    overflow-x: hidden !important;
+    display: flex !important;           
+    flex-direction: column !important;  
+    height: auto;
+    min-height: 100vh;
+    overflow-y: visible;
+    overflow-x: hidden;
   }
-  .evaluacion-main {
-    margin-left: 0 !important; 
-    padding: 20px 15px !important;
-  }
+
   .sidebar {
-    width: 100% !important; 
-    height: auto !important; 
-    min-height: auto !important;
-    max-height: fit-content !important; 
-    position: relative !important; 
-    transform: translateX(0) !important; 
-    padding: 12px 15px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
-    border-right: none !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-    z-index: 999 !important;
-    display: block !important;
+    width: 100% !important;             /* Indispensable: Destruye el ancho fijo de 220px de PC */
+    height: auto; 
+    min-height: auto;
+    max-height: fit-content; 
+    position: relative; 
+    transform: translateX(0) !important; /* Indispensable: Bloquea el script antiguo que la sacaba de pantalla */
+    padding: 12px 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 999;
+    display: block;
   }
 
   .sidebar .brand {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
   
   .sidebar .brand i.xmark {
-    display: none !important;
+    display: none;
   }
 
   .btn-menu-movil {
-    display: inline-flex !important;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: rgba(0, 188, 212, 0.1) !important;
-    color: #00bcd4 !important;
-    border: 1px solid rgba(0, 188, 212, 0.3) !important;
-    padding: 6px 12px !important;
-    border-radius: 4px !important;
-    font-size: 0.85rem !important;
+    background: rgba(0, 188, 212, 0.1);
+    color: #00bcd4;
+    border: 1px solid rgba(0, 188, 212, 0.3);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 500;
     cursor: pointer;
   }
 
   .sidebar ul {
-    display: none !important; 
-    flex-direction: column !important;
-    width: 100% !important;
-    gap: 5px !important;
-    padding: 10px 0 5px 0 !important;
-    margin-top: 10px !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    display: none !important;            
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    padding: 10px 0 5px 0;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .sidebar ul.open {
-    display: flex !important;
+    display: flex !important;            
   }
 
   .sidebar ul li {
-    margin-bottom: 0 !important;
-    width: 100% !important;
+    margin-bottom: 0;
+    width: 100%;
   }
 
   .sidebar-link {
-    display: flex !important;
-    align-items: center !important;
-    padding: 12px 15px !important;
-    font-size: 0.9rem !important;
-    border-radius: 6px !important;
-    background: rgba(255, 255, 255, 0.02) !important;
-    width: 100% !important;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.02);
+    width: 100%;
   }
 
   main, 
   .evaluacion-main,
   .main-content {
-    width: 100% !important;
-    padding: 20px 15px !important;
-    margin-left: 0 !important;
+    width: 100%;
+    padding: 20px 15px;
+    margin-left: 0 !important;           
   }
 
   .planetas-grid,
   .talleres-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .h5p-container,
   .h5p-mini-container {
-    padding: 8px !important;
-    margin-top: 10px !important;
-    border-radius: 8px !important;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 8px;
   }
-  .h5p-container iframe { height: 450px !important; width: 100% !important; }
-  .h5p-mini-container iframe { height: 320px !important; width: 100% !important; }
+  
+  .h5p-container iframe { height: 450px; width: 100%; }
+  .h5p-mini-container iframe { height: 320px; width: 100%; }
 
-  h1 { font-size: 1.4rem !important; }
-  .tema-img { width: 100% !important; height: auto !important; }
+  h1 { font-size: 1.4rem; }
+  .tema-img { width: 100%; height: auto; }
 }
 
+
 .header-seccion h1 {
-  color: #00bcd4 !important; 
+  color: #00bcd4; 
   margin-top: 0;
   margin-bottom: 5px;
 }
 
 .header-seccion p {
-  color: #e2e8f0 !important; 
+  color: #e2e8f0; 
   margin-top: 0;
   margin-bottom: 25px;
   font-size: 0.95rem;
@@ -2989,27 +2979,27 @@ body {
 }
 
 .planetas-grid .card-credito {
-  text-align: left !important;
-  padding: 20px !important;
+  text-align: left;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
 }
 
 .planetas-grid .btn-fuente {
-  margin-top: 15px !important;
-  display: block !important;
-  width: 100% !important;
-  text-align: center !important;
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 .header-seccion h1 {
-  color: #00bcd4 !important; 
+  color: #00bcd4; 
   margin-top: 0;
   margin-bottom: 5px;
 }
 
 .header-seccion p {
-  color: #e2e8f0 !important; 
+  color: #e2e8f0; 
   margin-top: 0;
   margin-bottom: 25px;
   font-size: 0.95rem;
@@ -3024,18 +3014,18 @@ body {
 }
 
 .planetas-grid .card-credito {
-  text-align: left !important;
-  padding: 20px !important;
+  text-align: left ;
+  padding: 20px ;
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
 }
 
 .planetas-grid .btn-fuente {
-  margin-top: 15px !important;
-  display: block !important;
-  width: 100% !important;
-  text-align: center !important;
+  margin-top: 15px ;
+  display: block ;
+  width: 100% ;
+  text-align: center ;
   box-sizing: border-box;
 }
 
