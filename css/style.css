@@ -2813,8 +2813,8 @@ body {
   padding: 20px !important;
   backdrop-filter: blur(8px) !important;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
-  margin: 15px auto 0 auto !important; /* Centra el contenedor en el espacio libre */
-  max-width: 900px !important;          /* Evita que se estire feo en pantallas panorámicas */
+  margin: 15px auto 0 auto !important; 
+  max-width: 900px !important;          
   width: 100% !important;
   box-sizing: border-box !important;
 }
@@ -2865,7 +2865,10 @@ body {
     overflow-y: visible !important;
     overflow-x: hidden !important;
   }
-
+  .evaluacion-main {
+    margin-left: 0 !important; 
+    padding: 20px 15px !important;
+  }
   .sidebar {
     width: 100% !important; 
     height: auto !important; 
