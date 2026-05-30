@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<<!DOCTYPE html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,299 +8,87 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&amp;display=swap"
-      rel="stylesheet"
-    />
-    
-    <title>Files</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&amp;display=swap" rel="stylesheet" />
+    <title>Descubriendo el Universo - Talleres Prácticos</title>
   </head>
   <body>
-    <!-- 1. Contenedor principal que organiza la pantalla -->
-    <div class="page-content">
-      
-      <!-- 2. REINTEGRAMOS TU BARRA LATERAL CON LA NUEVA IDENTIDAD -->
-      <div class="sidebar">
-        <div class="brand">
-          <i class="fa-solid fa-xmark xmark"></i>
-          <h3 class="brand-name" style="font-size: 1.1rem;">Descubriendo el universo</h3>
+    
+    <div class="wrapper">
+      <div class="page-content index-page">
+        
+        <div class="sidebar">
+          <div class="brand">
+            <i class="fa-solid fa-xmark xmark"></i>
+            <h3 class="brand-name" style="font-size: 1.1rem;">Descubriendo el universo</h3>
+          </div>
+          <ul>
+            <li><a href="../index.html" class="sidebar-link"><i class="fa-solid fa-rocket fa-fw"></i><span>Inicio / Introducción</span></a></li>
+            <li><a href="./Contenidos.html" class="sidebar-link"><i class="fa-solid fa-graduation-cap fa-fw"></i><span>Contenidos</span></a></li>
+            <li><a href="./Sistema-Solar.html" class="sidebar-link"><i class="fa-solid fa-sun fa-fw"></i><span>Sistema Solar</span></a></li>
+            <li><a href="./Files.html" class="sidebar-link active"><i class="fa-regular fa-folder fa-fw"></i><span>Talleres Prácticos</span></a></li>
+            <li><a href="./settings.html" class="sidebar-link"><i class="fa-solid fa-gear fa-fw"></i><span>Evaluación OVA</span></a></li>
+          </ul>
         </div>
-        <ul>
-          <li>
-            <a href="../index.html" class="sidebar-link">
-              <i class="fa-solid fa-rocket fa-fw"></i>
-              <span>Inicio / Introducción</span>
-            </a>
-          </li>
-          <li>
-            <a href="./Contenidos.html" class="sidebar-link">
-              <i class="fa-solid fa-graduation-cap fa-fw"></i>
-              <span>Contenidos</span>
-            </a>
-          </li>
-          <li>
-            <a href="./Files.html" class="sidebar-link active">
-              <i class="fa-regular fa-folder fa-fw"></i>
-              <span>Talleres Prácticos</span>
-            </a>
-          </li>
-          <li>
-            <a href="./settings.html" class="sidebar-link">
-              <i class="fa-solid fa-gear fa-fw"></i>
-              <span>Evaluación OVA</span>
-            </a>
-          </li>
-        </ul>
+
+        <main style="padding: 20px; color: #ffffff; flex-grow: 1; min-width: 0; width: 100%; overflow-y: auto; overflow-x: hidden;">
+          <div class="main-content">
+            
+            <div class="header-seccion">
+              <h1 style="color: #00bcd4; margin-top: 0; margin-bottom: 5px;"><i class="fa-regular fa-folder-open"></i> Laboratorio de Talleres Prácticos</h1>
+              <p style="color: #e2e8f0; margin-bottom: 25px;">Pon en práctica los conocimientos del aula resolviendo los siguientes retos oficiales de la misión.</p>
+            </div>
+
+            <div class="talleres-grid">
+              
+              <div class="card-taller">
+                <div>
+                  <div class="taller-badge badge-digital"><i class="fa-solid fa-gamepad"></i> Mini-juego Digital</div>
+                  <h3 style="color: #00bcd4; margin: 0 0 10px 0;"><i class="fa-solid fa-shuffle"></i> Reto 1: Relaciona los Componentes</h3>
+                  <p style="color: #b0b0b5; font-size: 0.85rem; line-height: 1.5; margin: 0;">
+                    ¡Hora de arrastrar! Conecta cada cuerpo celeste del universo con su descripción correcta moviendo los bloques de forma interactiva abajo:
+                  </p>
+                  
+                  <div class="h5p-mini-container" style="margin-top: 15px; border-radius: 6px; overflow: hidden; background-color: #ffffff;">
+                    <iframe 
+                      src="https://h5p.org/h5p/embed/1563356" 
+                      width="1091" 
+                      height="255" 
+                      frameborder="0" 
+                      allowfullscreen="allowfullscreen" 
+                      allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" 
+                      title="Organiza los planetas"
+                      style="width: 100%; display: block; border: none;">
+                    </iframe>
+                  </div>
+                </div>
+                <span class="btn-fuente" style="margin-top: 15px; text-align: center; background: rgba(0, 188, 212, 0.1); border-color: rgba(0, 188, 212, 0.3); color: #00bcd4 !important;"><i class="fa-solid fa-circle-check"></i> La actividad se reinicia si cambias de seccion o cierras la pestaña</span>
+              </div>
+
+              <div class="card-taller">
+                <div>
+                  <div class="taller-badge badge-manual"><i class="fa-solid fa-scissors"></i> Taller Manual</div>
+                  <h3 style="color: #f59e0b; margin: 0 0 10px 0;"><i class="fa-solid fa-earth-americas"></i> Reto 2: El Sistema Solar Reciclable</h3>
+                  <p style="color: #b0b0b5; font-size: 0.85rem; line-height: 1.5; margin: 0;">
+                    ¡Manos a la obra, constructor espacial! Saca tu lado creativo y fabrica una representación física o maqueta del Sistema Solar utilizando elementos que tengas en casa.
+                  </p>
+                  <ul style="margin: 15px 0; padding-left: 20px; list-style-type: disc; color: #b0b0b5; font-size: 0.85rem; line-height: 1.5;">
+                    <li>Usa cartón, tapas, botellas, plastilina o cualquier material reutilizable.</li>
+                    <li>Debe verse el Sol y los planetas ordenados según su distancia.</li>
+                    <li>Se evaluará la originalidad y el uso inteligente de los desechos en la exposición del salón.</li>
+                  </ul>
+                </div>
+                <span class="btn-fuente" style="margin-top: 15px; text-align: center; background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3); color: #f59e0b !important;"><i class="fa-solid fa-people-carry-box"></i> Presentar de forma física en el salón</span>
+              </div>
+
+            </div>
+
+          </div>
+        </main>
+        
       </div>
-
-      <!-- 3. Contenido de la página de archivos -->
-      <main>
-        <div class="header">
-          <i class="fa-solid fa-bars bar-item"></i>
-          <div class="search">
-            <input type="search" placeholder="Type A Keyword" />
-          </div>
-
-          <div class="profile">
-            <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
-            <img src="../images/avatar.png" alt="No Image" />
-          </div>
-        </div>
-        <div class="main-content">
-          <div class="title">
-            <h1>Files</h1>
-          </div>
-          <div class="files-main-content">
-            <div class="files-statistics">
-              <h2>Files Statistics</h2>
-              <div class="box">
-                <div class="file-info">
-                  <i class="fa-regular fa-file-pdf"></i>
-                  <div>
-                    <p>PDF Files</p>
-                    <span>130</span>
-                  </div>
-                </div>
-                <span>6.5GB</span>
-              </div>
-              <div class="box">
-                <div class="file-info">
-                  <i class="fa-regular fa-images"></i>
-                  <div>
-                    <p>Images</p>
-                    <span>115 Files</span>
-                  </div>
-                </div>
-                <span>3.5GB</span>
-              </div>
-              <div class="box">
-                <div class="file-info">
-                  <i class="fa-regular fa-file-word"></i>
-                  <div>
-                    <p>Word Files</p>
-                    <span>110 Files</span>
-                  </div>
-                </div>
-                <span>3.2GB</span>
-              </div>
-              <div class="box">
-                <div class="file-info">
-                  <i class="fa-solid fa-file-csv"></i>
-                  <div>
-                    <p>CSV Files</p>
-                    <span>99 Files</span>
-                  </div>
-                </div>
-                <span>2.9GB</span>
-              </div>
-              <a href="/#"><i class="fa-solid fa-angles-up"></i>Upload</a>
-            </div>
-            <div class="files-boxes">
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/pdf.svg" alt="" />
-                  <p>my-file.pdf</p>
-                  <span>Zana</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>20/06/2020</span>
-                  <span>5.5MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/avi.svg" alt="" />
-                  <p>my-file.avi</p>
-                  <span>Admin</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>16/05/2021</span>
-                  <span>12.5MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/eps.svg" alt="" />
-                  <p>my-file.eps</p>
-                  <span>Uploader</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>16/05/2021</span>
-                  <span>2.7MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/psd.svg" alt="" />
-                  <p>my-file.psd</p>
-                  <span>Ahmad</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>16/05/2021</span>
-                  <span>15.1MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/dll.svg" alt="" />
-                  <p>my-file.dll</p>
-                  <span>Coder</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>16/05/2021</span>
-                  <span>2.2MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/png.svg" alt="" />
-                  <p>my-file.png</p>
-                  <span>Designer</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>16/05/2021</span>
-                  <span>2.2MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/dll.svg" alt="" />
-                  <p>my-file.dll</p>
-                  <span>Coder</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>16/05/2021</span>
-                  <span>2.2MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/png.svg" alt="" />
-                  <p>my-file.png</p>
-                  <span>Designer</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>16/05/2021</span>
-                  <span>2.2MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/psd.svg" alt="" />
-                  <p>my-file.psd</p>
-                  <span>Ahmad</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>16/05/2021</span>
-                  <span>15.1MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/pdf.svg" alt="" />
-                  <p>my-file.pdf</p>
-                  <span>Zana</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>20/06/2020</span>
-                  <span>5.5MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/avi.svg" alt="" />
-                  <p>my-file.avi</p>
-                  <span>Admin</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>16/05/2021</span>
-                  <span>12.5MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/eps.svg" alt="" />
-                  <p>my-file.eps</p>
-                  <span>Uploader</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>16/05/2021</span>
-                  <span>2.7MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/psd.svg" alt="" />
-                  <p>my-file.psd</p>
-                  <span>Ahmad</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>16/05/2021</span>
-                  <span>15.1MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/dll.svg" alt="" />
-                  <p>my-file.dll</p>
-                  <span>Coder</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>16/05/2021</span>
-                  <span>2.2MB</span>
-                </div>
-              </div>
-              <div class="file-box">
-                <i class="fa-solid fa-download"></i>
-                <div class="file-box-card-body">
-                  <img src="../images/png.svg" alt="" />
-                  <p>my-file.png</p>
-                  <span>Designer</span>
-                </div>
-                <div class="file-box-card-footer">
-                  <span>16/05/2021</span>
-                  <span>2.2MB</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div> <!-- Cierre correcto de page-content -->
+    </div>
+    
+    <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>
