@@ -2621,9 +2621,7 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
 .main-content .plans-boxes .plan-box ul li:last-child p {
   color: var(--third-color);
 }
-/* ==========================================================================
-   🌌 NÚCLEO ESPACIAL - REGLAS GENERALES DE VISIBILIDAD DE LA OVA
-   ========================================================================== */
+/*  NÚCLEO ESPACIAL - REGLAS GENERALES DE VISIBILIDAD DE LA OVA*/
 body, .wrapper, .page-content, main {
   opacity: 1 !important;
   display: flex !important;
@@ -2848,18 +2846,27 @@ body {
 }
 /* para los celulares*/
 @media (max-width: 768px) {
-  .page-content.index-page,
+  body, 
+  .wrapper, 
+  .page-content,
+  main,
+  .evaluacion-main {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+  }
+
+.page-content.index-page,
   .evaluacion-page {
     flex-direction: column !important;
   }
-
   .sidebar {
     width: 100% !important;
     height: auto !important;
     position: relative !important;
     padding: 15px !important;
   }
-
   .sidebar ul {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -2875,15 +2882,19 @@ body {
     padding: 8px 12px !important;
     font-size: 0.85rem !important;
   }
-
   main, 
   .evaluacion-main {
     width: 100% !important;
     padding: 15px !important;
-    overflow-x: hidden !important;
   }
-
-  .h5p-container {
+  .planetas-grid,
+  .talleres-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  .h5p-container,
+  .h5p-mini-container {
     padding: 10px !important;
     margin-top: 10px !important;
     border-radius: 8px !important;
@@ -2891,8 +2902,13 @@ body {
 
   .h5p-container iframe {
     height: 450px !important; 
+    width: 100% !important;
   }
 
+  .h5p-mini-container iframe {
+    height: 380px !important;
+    width: 100% !important;
+  }
 
   h1 {
     font-size: 1.5rem !important;
@@ -2903,7 +2919,6 @@ body {
     height: auto !important;
   }
 }
-
 .header-seccion h1 {
   color: #00bcd4 !important; 
   margin-top: 0;
