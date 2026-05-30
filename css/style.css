@@ -2778,29 +2778,34 @@ body {
   background-position: 0 0, 40px 60px, 130px 270px !important;
 }
 
-/* El bloque principal ahora se expande y centra su contenido interior */
 .evaluacion-main {
   flex-grow: 1 !important;
   min-width: 0 !important;
-  height: 100vh !important;
-  padding: 40px 20px !important; /* Más espacio arriba y abajo */
-  overflow-y: auto !important;
+  height: auto !important; 
+  min-height: 100vh !important;
+  
+  /* 🛠️ CAMBIO SÚPER CLAVE: Agregamos un margen izquierdo de 220px */
+  /* Esto obliga a todo el bloque a nacer DEBAJO/AL LADO de la barra de PC */
+  margin-left: 220px !important; 
+  
+  padding: 40px 30px !important; 
   background-color: transparent !important;
   
-  /* Centrado mágico del contenido */
   display: flex !important;
   flex-direction: column !important;
-  align-items: center !important; /* Centra horizontalmente todo lo que esté dentro */
+  align-items: center !important; 
+  box-sizing: border-box !important;
 }
 
-/* Contenedor del título alineado con el ancho del iframe */
+/* Contenedor del título de la evaluación */
 .evaluacion-main > div:first-child {
   width: 100% !important;
-  max-width: 1000px !important; /* Alineado con el contenedor del juego */
+  max-width: 900px !important; /* Un ancho más estilizado y estándar */
   text-align: left !important;
+  margin-bottom: 10px !important;
 }
 
-/* Caja de diseño para el iFrame de H5P (ocupa el centro real de la pantalla) */
+/* Caja de diseño para el iFrame de H5P */
 .h5p-container {
   background-color: rgba(20, 20, 23, 0.7) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -2808,14 +2813,17 @@ body {
   padding: 20px !important;
   backdrop-filter: blur(8px) !important;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
-  margin-top: 15px !important;
-  max-width: 1000px !important; /* Limita el ancho para que no se estire feo */
+  margin: 15px auto 0 auto !important; /* Centra el contenedor en el espacio libre */
+  max-width: 900px !important;          /* Evita que se estire feo en pantallas panorámicas */
   width: 100% !important;
+  box-sizing: border-box !important;
 }
 
+/* El iFrame interno del juego interactivo */
 .h5p-container iframe {
   width: 100% !important;
-  height: 650px !important; /* Altura perfecta para que jueguen los alumnos sin problemas */
+  max-width: 100% !important; 
+  height: 650px !important; 
   border: none !important;
   border-radius: 8px !important;
   background-color: #ffffff !important;
@@ -2848,7 +2856,8 @@ body {
 @media (max-width: 768px) {
   body, 
   .wrapper, 
-  .page-content {
+  .page-content,
+  .evaluacion-page {   
     display: flex !important;
     flex-direction: column !important; 
     height: auto !important;
@@ -2861,12 +2870,13 @@ body {
     width: 100% !important; 
     height: auto !important; 
     min-height: auto !important;
+    max-height: fit-content !important; 
     position: relative !important; 
-    transform: none !important; 
+    transform: translateX(0) !important; 
     padding: 12px 15px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
     border-right: none !important;
-    border-bottom: 1px solid #1f1f23 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     z-index: 999 !important;
     display: block !important;
   }
