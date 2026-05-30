@@ -91,3 +91,23 @@ getSidebarLink.forEach((item) => {
     item.classList.add("active");
   }
 });
+  
+//celulares
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const sidebarUl = document.querySelector(".sidebar ul");
+
+  if (menuToggle && sidebarUl) {
+    menuToggle.addEventListener("click", function (e) {
+      e.stopPropagation(); 
+      sidebarUl.classList.toggle("open");
+    });
+
+    
+    document.addEventListener("click", function (e) {
+      if (!sidebarUl.contains(e.target) && e.target !== menuToggle) {
+        sidebarUl.classList.remove("open");
+      }
+    });
+  }
+});
