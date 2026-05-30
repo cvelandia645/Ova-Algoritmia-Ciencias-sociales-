@@ -2642,7 +2642,7 @@ body, .wrapper, .page-content, main {
 
 /*  BARRA LATERAL */
 .sidebar {
-  background: linear-gradient(to bottom, #09090b 0%, #1a3d72 100%) !important;
+  
   background-image: linear-gradient(to bottom, #09090b 0%, #1a3d72 100%) !important;
   border-right: 1px solid #1f1f23 !important;
   min-height: 100vh;
